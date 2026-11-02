@@ -1,0 +1,10 @@
+
+# Wyniki kompilacji
+pitwall
+*.exe
+*.o
+
+# Edytor i system
+.vscode/
+desktop.ini
+Thumbs.db
