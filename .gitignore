@@ -1,0 +1,6 @@
+# wyniki kompilacji
+*.exe
+*.o
+pitwall
+# pliki systemu
+desktop.ini
