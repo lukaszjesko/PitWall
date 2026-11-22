@@ -4,3 +4,6 @@
 pitwall
 # pliki systemu
 desktop.ini
+
+#ustawienia edytora
+.vscode/
