@@ -1,0 +1,5 @@
+Tor Poznań
+okrazenia 30
+czas_okrazenia 91.5
+strata_w_boksie 21.0
+zuzycie 1.0

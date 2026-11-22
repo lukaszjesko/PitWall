@@ -1,0 +1,5 @@
+Tor Testowy
+okrazenia trzydziesci
+czas_okrazenia 90.0
+strata_w_boksie 20.0
+zuzycie 1.0

@@ -1,0 +1,5 @@
+Monza
+okrazenia 32
+czas_okrazenia 82.0
+strata_w_boksie 24.0
+zuzycie 0.8

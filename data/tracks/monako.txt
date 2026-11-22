@@ -1,0 +1,5 @@
+Monako
+okrazenia 40
+czas_okrazenia 73.5
+strata_w_boksie 19.0
+zuzycie 0.6
