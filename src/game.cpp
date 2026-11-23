@@ -148,10 +148,15 @@ Car* Game::findCar(const std::string& team_name) {
 // Gracz planuje opony i okrążenie zjazdu przed startem.
 // Komputer zjeżdża, gdy zużycie opon przekroczy 55%.
 void Game::startRace() {
-    std::string path =
-        readLine(" Plik toru (Enter = data/tracks/poznan.txt) > ");
-    if (path.empty()) {
-        path = "data/tracks/poznan.txt";
+    std::cout << " TORY: 1 Poznań, 2 Monza, 3 Monako, 4 inny plik\n";
+    int choice = readInt(" Tor > ", 1, 4);
+    std::string path = "data/tracks/poznan.txt";
+    if (choice == 2) {
+        path = "data/tracks/monza.txt";
+    } else if (choice == 3) {
+        path = "data/tracks/monako.txt";
+    } else if (choice == 4) {
+        path = readLine(" Plik toru > ");
     }
     Track track;
     try {
