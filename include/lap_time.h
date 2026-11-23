@@ -8,6 +8,7 @@
 class LapTime {
 public:
     LapTime();
+    
     explicit LapTime(int milliseconds);
 
     static LapTime fromSeconds(double seconds);

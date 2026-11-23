@@ -15,7 +15,7 @@ int Driver::getSkill() const {
     return skill_;
 }
 
-// Setter pilnuje zakresu: 150 zamieni na 100, -5 na 0.
+// Setter pilnuje zakresu: 150 zamieni na 100, -5 na 0
 void Driver::setSkill(int skill) {
     if (skill < MIN_SKILL) {
         skill = MIN_SKILL;
