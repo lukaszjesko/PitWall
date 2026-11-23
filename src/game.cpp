@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <iostream>
+#include <stdexcept>
 
 #include "console.h"
 
@@ -143,11 +144,22 @@ Car* Game::findCar(const std::string& team_name) {
     return nullptr;
 }
 
-// Wyścig. Na razie zawsze Tor Poznań (konstruktor domyślny Track).
+// Wyścig. Tor z pliku: zły plik rzuca wyjątek, łapiemy go tutaj.
 // Gracz planuje opony i okrążenie zjazdu przed startem.
 // Komputer zjeżdża, gdy zużycie opon przekroczy 55%.
 void Game::startRace() {
+    std::string path =
+        readLine(" Plik toru (Enter = data/tracks/poznan.txt) > ");
+    if (path.empty()) {
+        path = "data/tracks/poznan.txt";
+    }
     Track track;
+    try {
+        track = Track::loadFromFile(path);
+    } catch (const std::runtime_error& error) {
+        std::cout << " Błąd toru: " << error.what() << "\n";
+        return;
+    }
     Compound start = readCompound(" Opony na start (s/m/h) > ");
     int pit_lap = readInt(" Okrążenie zjazdu (0 = bez zjazdu) > ", 0,
                           track.getLaps() - 1);

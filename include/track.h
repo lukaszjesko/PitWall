@@ -12,6 +12,8 @@ public:
     Track(const std::string& name, int laps, const LapTime& base_lap,
           const LapTime& pit_loss, double wear_factor);
 
+    static Track loadFromFile(const std::string& path);
+
     std::string getName() const;
     int getLaps() const;
     LapTime getBaseLap() const;
